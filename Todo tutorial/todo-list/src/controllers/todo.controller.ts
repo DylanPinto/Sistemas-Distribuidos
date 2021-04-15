@@ -1,3 +1,7 @@
+// ---------- ADD IMPORTS -------------
+import {authenticate} from '@loopback/authentication';
+// ------------------------------------
+
 import {
   Count,
   CountSchema,
@@ -19,7 +23,7 @@ import {
 } from '@loopback/rest';
 import {Todo} from '../models';
 import {TodoRepository} from '../repositories';
-
+@authenticate('jwt') // <---- Apply the @authenticate decorator at the class level
 export class TodoController {
   constructor(
     @repository(TodoRepository)
