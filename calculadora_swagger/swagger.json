@@ -1,0 +1,39 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Calculadora",
+      "description": "API Calculadora com swagger",
+      "version": "1.0"
+    },
+    "host": "localhost:8001",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/soma/{a}&{b}": {
+        "get": {
+          "description": "Escolha dois números.",
+          "operationId": "SOMA",
+          "parameters": [
+            {
+              "name": "a",
+              "in": "path",
+              "description": "Primeiro número.",
+              "required": true
+              
+              
+            },
+            {
+              "name": "b",
+              "in": "path",
+              "description": "Segundo número.",
+              "required": true
+              
+            }
+          ],
+          "responses": {}
+        }
+      }
+    }   
+}
